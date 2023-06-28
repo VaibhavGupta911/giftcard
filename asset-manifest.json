@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/giftcard/static/css/main.e6c13ad2.css",
+    "main.js": "/giftcard/static/js/main.5b108f36.js",
+    "static/js/787.a625a3c1.chunk.js": "/giftcard/static/js/787.a625a3c1.chunk.js",
+    "index.html": "/giftcard/index.html",
+    "main.e6c13ad2.css.map": "/giftcard/static/css/main.e6c13ad2.css.map",
+    "main.5b108f36.js.map": "/giftcard/static/js/main.5b108f36.js.map",
+    "787.a625a3c1.chunk.js.map": "/giftcard/static/js/787.a625a3c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5b108f36.js"
+  ]
+}
