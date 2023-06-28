@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+export default function App() {
+  const [giftCard, setGiftCard] = useState(
+    {
+      firstName: "Jennifer",
+      lastName: "Smith",
+      text: "Free dinner for 4 guests",
+      valid: true,
+      instructions: "To use your coupon, click the button below.",
+    }
+  );
+
+  function spendGiftCard() {
+    setGiftCard((prevState) => {
+      return {
+        ...prevState,
+        text: "Your coupon has been used.",
+        valid: false,
+        instructions: "Please visit our restaurant to renew your gift card..",
+      }
+    });
+
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '40px' }}>
+      <h1>
+        Gift Card Page
+      </h1>
+      <h2>
+        Customer: {giftCard.firstName} {giftCard.lastName}
+      </h2>
+      <h3>
+        {giftCard.text}
+      </h3>
+      <p>
+        {giftCard.instructions}
+      </p>
+      {
+        giftCard.valid && (
+          <button onClick={spendGiftCard}>
+            Spend Gift Card
+          </button>
+        )
+      }
     </div>
   );
 }
 
-export default App;
+
